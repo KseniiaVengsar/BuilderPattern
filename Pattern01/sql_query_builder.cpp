@@ -27,8 +27,8 @@ std::string SqlSelectQueryBuilder::BuildQuery() const {
         for (const auto& column : columns_) {
             query += column + ", ";
         }
-        query.pop_back(); // Remove trailing comma
-        query.pop_back(); // Remove space
+        query.pop_back(); 
+        query.pop_back(); 
     }
 
     query += " FROM " + from_;
@@ -38,8 +38,8 @@ std::string SqlSelectQueryBuilder::BuildQuery() const {
         for (const auto& condition : where_) {
             query += condition.first + "=" + condition.second + " AND ";
         }
-        query.pop_back(); // Remove trailing space
-        query.pop_back(); // Remove trailing AND
+        query.pop_back(); 
+        query.pop_back(); 
     }
 
     query += ";";
